@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ar.com.proyecto.enzo.java.gui.FXMLController">
+   <children>
+      <TabPane prefHeight="654.0" prefWidth="462.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Alumnos">
+               <content>
+                  <AnchorPane prefHeight="662.0" prefWidth="462.0">
+                     <children>
+                        <Label layoutX="39.0" layoutY="20.0" prefHeight="48.0" prefWidth="84.0" text="Nombre:" />
+                        <TextField fx:id="txtNombre" layoutX="137.0" layoutY="33.0" prefHeight="22.0" prefWidth="290.0" />
+                        <TextField fx:id="txtApellido" layoutX="135.0" layoutY="87.0" prefHeight="22.0" prefWidth="292.0" />
+                        <Label layoutX="39.0" layoutY="74.0" prefHeight="48.0" prefWidth="84.0" text="Apellido:" />
+                        <Label layoutX="39.0" layoutY="131.0" prefHeight="48.0" prefWidth="84.0" text="Edad:" />
+                        <TextField fx:id="txtEdad" layoutX="136.0" layoutY="144.0" prefHeight="22.0" prefWidth="292.0" />
+                        <Label layoutX="39.0" layoutY="190.0" prefHeight="48.0" prefWidth="84.0" text="Curso:" />
+                        <Label fx:id="lblInfo" layoutX="36.0" layoutY="289.0" prefHeight="48.0" prefWidth="390.0" />
+                        <Separator layoutX="31.0" layoutY="291.0" prefHeight="3.0" prefWidth="400.0" AnchorPane.topAnchor="280.0" />
+                        <Separator layoutX="32.0" layoutY="349.0" prefHeight="0.0" prefWidth="398.0" />
+                        <Button layoutX="375.0" layoutY="247.0" mnemonicParsing="false" onAction="#Agregar" text="Agregar" />
+                        <ComboBox fx:id="cmbCursos" layoutX="137.0" layoutY="203.0" prefHeight="22.0" prefWidth="290.0" />
+                        <TableView fx:id="tblAlumnos" layoutX="36.0" layoutY="402.0" prefHeight="200.0" prefWidth="390.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="32.0" layoutY="354.0" prefHeight="48.0" prefWidth="84.0" text="Buscar Apellido:" />
+                        <TextField fx:id="txtBuscarApe" layoutX="127.0" layoutY="367.0" onKeyReleased="#buscarApe" prefHeight="22.0" prefWidth="220.0" />
+                        <Button layoutX="374.0" layoutY="367.0" mnemonicParsing="false" onAction="#BorrarAlumno" prefHeight="22.0" prefWidth="57.0" text="Borrar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Cursos">
+               <content>
+                  <AnchorPane prefHeight="662.0" prefWidth="462.0">
+                     <children>
+                        <Label layoutX="39.0" layoutY="20.0" prefHeight="48.0" prefWidth="84.0" text="Título:" />
+                        <TextField fx:id="txtTitulo" layoutX="137.0" layoutY="33.0" prefHeight="22.0" prefWidth="290.0" />
+                        <TextField fx:id="txtProfesor" layoutX="135.0" layoutY="87.0" prefHeight="22.0" prefWidth="292.0" />
+                        <Label layoutX="39.0" layoutY="74.0" prefHeight="48.0" prefWidth="84.0" text="Profesor:" />
+                        <Label layoutX="39.0" layoutY="131.0" prefHeight="48.0" prefWidth="84.0" text="Día:" />
+                        <TextField fx:id="txtDia" layoutX="136.0" layoutY="144.0" prefHeight="22.0" prefWidth="292.0" />
+                        <Label layoutX="39.0" layoutY="190.0" prefHeight="48.0" prefWidth="84.0" text="Turno:" />
+                        <Label fx:id="lblInfo1" layoutX="36.0" layoutY="289.0" prefHeight="48.0" prefWidth="390.0" />
+                        <Separator layoutX="31.0" layoutY="291.0" prefHeight="3.0" prefWidth="400.0" AnchorPane.topAnchor="280.0" />
+                        <Separator layoutX="32.0" layoutY="349.0" prefHeight="0.0" prefWidth="398.0" />
+                        <Button layoutX="375.0" layoutY="247.0" mnemonicParsing="false" onAction="#AgregarCurso" text="Agregar" />
+                        <TableView fx:id="tblCurso" layoutX="36.0" layoutY="402.0" prefHeight="200.0" prefWidth="390.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="32.0" layoutY="354.0" prefHeight="48.0" prefWidth="84.0" text="Buscar Curso:" />
+                        <TextField fx:id="txtBuscarCurso" layoutX="127.0" layoutY="367.0" onKeyReleased="#buscarCurso" prefHeight="22.0" prefWidth="220.0" />
+                        <Button layoutX="374.0" layoutY="367.0" mnemonicParsing="false" onAction="#BorrarCurso" prefHeight="22.0" prefWidth="57.0" text="Borrar curso" />
+                        <TextField fx:id="txtTurno" layoutX="136.0" layoutY="202.0" prefHeight="22.0" prefWidth="292.0" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

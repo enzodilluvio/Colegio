@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="40.0" layoutY="28.0" prefHeight="23.0" prefWidth="43.0" text="Nombre:" />
+      <TextField fx:id="txtNombre" layoutX="176.0" layoutY="29.0" prefHeight="22.0" prefWidth="256.0" />
+      <Label layoutX="40.0" layoutY="65.0" prefHeight="23.0" prefWidth="43.0" text="Apellido:" />
+      <TextField fx:id="txtApellido" layoutX="176.0" layoutY="66.0" prefHeight="22.0" prefWidth="256.0" />
+      <Label layoutX="40.0" layoutY="112.0" prefHeight="23.0" prefWidth="43.0" text="Edad:" />
+      <Label layoutX="40.0" layoutY="157.0" prefHeight="23.0" prefWidth="43.0" text="Curso:" />
+      <TextField fx:id="txtEdad" layoutX="176.0" layoutY="113.0" prefHeight="22.0" prefWidth="256.0" />
+      <TextField fx:id="txtCurso" layoutX="176.0" layoutY="158.0" prefHeight="22.0" prefWidth="256.0" />
+      <Button layoutX="339.0" layoutY="220.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="22.0" prefWidth="93.0" text="Agregar" />
+      <Label fx:id="lblInfo" layoutX="40.0" layoutY="189.0" prefHeight="23.0" prefWidth="392.0" />
+   </children>
+</AnchorPane>
